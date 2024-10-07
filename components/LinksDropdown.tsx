@@ -15,7 +15,6 @@ function DropdownLinks() {
       <DropdownMenuTrigger asChild className="lg:hidden">
         <Button variant="outline" size="icon">
           <AlignLeft />
-
           <span className="sr-only">Toggle links</span>
         </Button>
       </DropdownMenuTrigger>

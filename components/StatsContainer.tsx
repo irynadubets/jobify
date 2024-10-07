@@ -1,4 +1,5 @@
 "use client";
+
 import { useQuery } from "@tanstack/react-query";
 import { getStatsAction } from "@/utils/actions";
 import StatsCard, { StatsLoadingCard } from "./StatsCard";
