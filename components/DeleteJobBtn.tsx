@@ -13,7 +13,7 @@ function DeleteJobBtn({ id }: { id: string }) {
     onSuccess: (data) => {
       if (!data) {
         toast({
-          description: "there was an error",
+          description: "There was an error",
         });
         return;
       }
@@ -21,7 +21,7 @@ function DeleteJobBtn({ id }: { id: string }) {
       queryClient.invalidateQueries({ queryKey: ["stats"] });
       queryClient.invalidateQueries({ queryKey: ["charts"] });
 
-      toast({ description: "job removed" });
+      toast({ description: "Job removed" });
     },
   });
   return (
@@ -32,7 +32,7 @@ function DeleteJobBtn({ id }: { id: string }) {
         mutate(id);
       }}
     >
-      {isPending ? "deleting..." : "delete"}
+      {isPending ? "Deleting..." : "Delete"}
     </Button>
   );
 }

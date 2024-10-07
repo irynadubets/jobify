@@ -39,11 +39,11 @@ function EditJobForm({ jobId }: { jobId: string }) {
     onSuccess: (data) => {
       if (!data) {
         toast({
-          description: "there was an error",
+          description: "There was an error",
         });
         return;
       }
-      toast({ description: "job updated" });
+      toast({ description: "Job updated" });
       queryClient.invalidateQueries({ queryKey: ["jobs"] });
       queryClient.invalidateQueries({ queryKey: ["job", jobId] });
       queryClient.invalidateQueries({ queryKey: ["stats"] });
@@ -101,7 +101,7 @@ function EditJobForm({ jobId }: { jobId: string }) {
             className="self-end capitalize"
             disabled={isPending}
           >
-            {isPending ? "updating..." : "edit job"}
+            {isPending ? "Updating..." : "Edit job"}
           </Button>
         </div>
       </form>
